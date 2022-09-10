@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'meat lovers',
+    price: 10.50,
+    category: 'entree',
+    popularity: 9,
+    rating: 4,
+    tags:['kids', 'family', 'parties']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,8 +70,8 @@
 */
 
 //CODE HERE
-
-
+let{price} = pizza;
+console.log(price);
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,6 +80,8 @@
 */
 
 //CODE HERE
+let {category} = pizza;
+console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,7 +97,38 @@
 */
 
 //CODE HERE
-
+const foodArr = [
+    { name: 'hamburger',
+    cost: 7.50,
+    category: 'entree',
+    popularilty: 8,
+    rating: 4,
+    tags:['glutenFree', 'doubleStacked', 'withCheese']}, 
+    {name: 'salad',
+    cost: 5.55,
+    category: 'appitizer',
+    popularity: 6,
+    rating: 3,
+    tags:['glutenFree', 'withNuts', 'dressing']},
+    {name: 'fries',
+    cost: 2.50,
+    category: 'side',
+    popularity: 9,
+    rating: 5,
+    tags:['large', 'medium', 'small']},
+    {name: 'steak',
+    cost: 16,
+    category: 'entree',
+    popularity: 8,
+    rating: 4.5,
+    tags:['gultenFree','wellDone', 'mediumRare', 'rare']},
+    {name: 'tacos',
+    cost: 4.50,
+    category: 'entree',
+    popularity: 7,
+    rating: 4,
+    tags:['carneAsada', 'chicken', 'pork']}
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +145,16 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((item) => {
+   for(let i = 0; i < item.length; i++){
+    if(item.tags === 'glutenFree'){
+        return true
+    } else {
+        return false
+    }
+   }
+})
+console.log(filteredFood)
 
 
 
@@ -149,7 +198,10 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let arrFiltered = foodArr.filter()
 
+}
 
 /*
     Invoke the `filterByProperty` function passing
