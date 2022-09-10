@@ -43,7 +43,7 @@ class Employee {
 */
 
 //CODE HERE
-const empOne = new Employee('jess', 'weekday mornings and afternoons');
+let empOne = new Employee('jess', 'weekday mornings and afternoons');
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -51,6 +51,7 @@ const empOne = new Employee('jess', 'weekday mornings and afternoons');
 
 //CODE HERE
 empOne.getSchedule();
+console.log(empOne);
 
 /*
     Make a copy of the empOne object
@@ -65,7 +66,9 @@ empOne.getSchedule();
 */
 
 //CODE HERE
-const empTwo = [...empOne.name = 'Nick' ]
+let empTwo = {...empOne};
+empTwo.name = 'Nick'
+console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////
