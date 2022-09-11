@@ -51,8 +51,6 @@ let empOne = new Employee('jess', 'weekday mornings and afternoons');
 
 //CODE HERE
 empOne.getSchedule();
-console.log(empOne);
-
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -107,7 +105,7 @@ class Manager extends Employee {
 
     addEmployee(emp){
         let employees = [];
-        employees.push(this.name)
+        employees.push(emp)
     }
 }
 

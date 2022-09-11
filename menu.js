@@ -103,7 +103,7 @@ const foodArr = [
     category: 'entree',
     popularilty: 8,
     rating: 4,
-    tags:['glutenFree', 'doubleStacked', 'withCheese']}, 
+    tags:['doubleStacked', 'withCheese']}, 
     {name: 'salad',
     cost: 5.55,
     category: 'appitizer',
@@ -121,13 +121,13 @@ const foodArr = [
     category: 'entree',
     popularity: 8,
     rating: 4.5,
-    tags:['gultenFree','wellDone', 'mediumRare', 'rare']},
+    tags:['glutenFree','wellDone', 'mediumRare', 'rare']},
     {name: 'tacos',
     cost: 4.50,
     category: 'entree',
     popularity: 7,
     rating: 4,
-    tags:['carneAsada', 'chicken', 'pork']}
+    tags:['glutenFree', 'carneAsada', 'chicken', 'pork']}
 ]
 
 
@@ -144,18 +144,9 @@ const foodArr = [
 */
 
 //CODE HERE
-const callBack = (arr) => {
-    for(let i = 0; i < arr.lenth; i++){
-        if(i.tags.includes('glutenFree')){
-            return true
-        } else {
-            return false
-        }
-    }
-}
-const filteredFood = foodArr.filter(callBack)
-console.log(filteredFood)
 
+const filteredFood = foodArr.filter(ele => ele.tags.includes('glutenFree') )
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -199,7 +190,13 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    let arrFiltered = foodArr.filter()
+    let arrFiltered = foodArr.filter(() => {
+        if(property > number){
+            return property && type === 'above'
+        } else{
+            return property < number && type === 'below'
+        }
+    })
 
 }
 
@@ -211,3 +208,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+filterByProperty()

@@ -123,8 +123,8 @@ const deals = [
 */
 
 //CODE HERE
-let newDeals1 = deals[0].title.replace('15', '10')
-console.log(newDeals1)
+let newDeals = deals[0].title.replace('15', '10')
+console.log(newDeals)
 
 
 
@@ -142,8 +142,8 @@ console.log(newDeals1)
 */
 
 //CODE HERE
-let newDeals = deals[1].desc.trim().replace('March', 'April');
-console.log(newDeals)
+let newDeals1 = deals[1].desc.trim().replace('March', 'April');
+console.log(newDeals1)
 
 
 
