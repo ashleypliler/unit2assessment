@@ -62,9 +62,6 @@ const canWeDeliver = (zipCode) => {
 console.log(canWeDeliver(84004))
 console.log(canWeDeliver(85205))
 
-
-
-
 /* 
     Problem 2 Continued
 

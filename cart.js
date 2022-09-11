@@ -34,8 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
-
-const summedPrice = cart.reduce((acc, curr) => acc + curr)
+const summedPrice = cart.reduce((acc, curr) => cart[0].price + cart[1].price + cart[2].price)
+console.log(summedPrice);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +54,8 @@ const summedPrice = cart.reduce((acc, curr) => acc + curr)
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => cartTotal * (tax + 1) - couponValue;
+console.log(calcFinalPrice(55, 12, .04));
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +80,11 @@ const summedPrice = cart.reduce((acc, curr) => acc + curr)
 
 /*
     TEXT ANSWER HERE
-
+    the custumor object should have:
+    1. the resturant needs to know the customer's name. it should be a string in the object
+    2. the resturant needs to know if the order is to stay or to go. which should be an array of strings with each option
+    3. the resturant needs to know the customer's order number to give them the food. which should be a number
+    4. the resturant needs to know if the customer has a coupon or not. which should be a boolen of true or false
 */
 
 /*
@@ -88,3 +93,10 @@ const summedPrice = cart.reduce((acc, curr) => acc + curr)
 */
 
 //CODE HERE
+
+const customer = {
+    name: 'ashley',
+    option: ['to stay', 'to go'],
+    ordNum: 23,
+    coupon: false
+}

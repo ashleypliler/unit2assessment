@@ -144,16 +144,16 @@ const foodArr = [
 */
 
 //CODE HERE
-
-const filteredFood = foodArr.filter((item) => {
-   for(let i = 0; i < item.length; i++){
-    if(item.tags === 'glutenFree'){
-        return true
-    } else {
-        return false
+const callBack = (arr) => {
+    for(let i = 0; i < arr.lenth; i++){
+        if(i.tags.includes('glutenFree')){
+            return true
+        } else {
+            return false
+        }
     }
-   }
-})
+}
+const filteredFood = foodArr.filter(callBack)
 console.log(filteredFood)
 
 
