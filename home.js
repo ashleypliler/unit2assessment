@@ -22,8 +22,8 @@
 */
 
 //CODE HERE
-const greetUser = (username) => `Welcome back, ${username}`;
-console.log(greetUser('ashley'))
+const greetUser = (username) => `Welcome back, ${username}!`;
+console.log(greetUser('Ashley'))
 
 
 

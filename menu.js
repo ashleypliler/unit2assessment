@@ -99,31 +99,31 @@ console.log(category);
 //CODE HERE
 const foodArr = [
     { name: 'hamburger',
-    cost: 7.50,
+    price: 7.50,
     category: 'entree',
     popularilty: 8,
     rating: 4,
     tags:['doubleStacked', 'withCheese']}, 
     {name: 'salad',
-    cost: 5.55,
+    price: 5.55,
     category: 'appitizer',
     popularity: 6,
     rating: 3,
     tags:['glutenFree', 'withNuts', 'dressing']},
     {name: 'fries',
-    cost: 2.50,
+    price: 2.50,
     category: 'side',
     popularity: 9,
     rating: 5,
     tags:['large', 'medium', 'small']},
     {name: 'steak',
-    cost: 16,
+    price: 16,
     category: 'entree',
     popularity: 8,
     rating: 4.5,
     tags:['glutenFree','wellDone', 'mediumRare', 'rare']},
     {name: 'tacos',
-    cost: 4.50,
+    price: 4.50,
     category: 'entree',
     popularity: 7,
     rating: 4,
@@ -190,14 +190,16 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    let arrFiltered = foodArr.filter(() => {
-        if(property > number){
-            return property && type === 'above'
-        } else{
-            return property < number && type === 'below'
-        }
-    })
-
+    const filteredArr = foodArr.filter((ele) => {
+       for(let i = 0; i < ele.length; i++){
+        if(type === 'above'){
+            return ele.property > number
+    }else if(type === 'below'){
+        return ele.property < number
+    }
+    }
+})
+return filteredArr;
 }
 
 /*
@@ -208,4 +210,5 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-filterByProperty()
+// filterByProperty(8.65, 5, 'above');
+console.log(filterByProperty('price', 3, 'above'))
