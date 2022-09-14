@@ -63,7 +63,7 @@ const firstTicket = new Ticket("pizza, bread, and soda", '7:03 PM', 575 )
 /*
     Call the `updateStatus` method on
     `firstTicket` passing in the string
-    'cooking'
+    'cooking'//
 */
 
 //CODE HERE
