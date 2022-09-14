@@ -43,7 +43,7 @@ class Employee {
 */
 
 //CODE HERE
-let empOne = new Employee('jess', 'weekday mornings and afternoons');
+let empOne = new Employee('jess', 'weekday mornings, weekday afternoons');
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -123,7 +123,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-const manager = new Manager ('Winston', 'weekday mornings and weekday afternoons', 'cece and schmidt')
+const manager = new Manager ('Winston', 'weekday mornings, weekday afternoons', 'cece and schmidt')
 
 /*
     Call the `getEmployees` method on the

@@ -142,8 +142,8 @@ console.log(newDeals)
 */
 
 //CODE HERE
-let newDeals1 = deals[1].desc.trim().replace('March', 'April');
-console.log(newDeals1)
+let newDeals2 = deals[1].desc.trim().replace('March', 'April');
+console.log(newDeals2)
 
 
 

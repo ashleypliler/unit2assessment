@@ -70,7 +70,7 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-let{price} = pizza;
+let {price} = pizza;
 console.log(price);
 /*
     Fourth, and last, destructure the category
@@ -98,19 +98,19 @@ console.log(category);
 
 //CODE HERE
 const foodArr = [
-    { name: 'hamburger',
+    { name: 'chicken',
     price: 7.50,
     category: 'entree',
     popularilty: 8,
     rating: 4,
-    tags:['doubleStacked', 'withCheese']}, 
+    tags:['with noodles', 'extra sauce']}, 
     {name: 'salad',
     price: 5.55,
     category: 'appitizer',
     popularity: 6,
     rating: 3,
     tags:['glutenFree', 'withNuts', 'dressing']},
-    {name: 'fries',
+    {name: 'bread sticks',
     price: 2.50,
     category: 'side',
     popularity: 9,
@@ -122,12 +122,12 @@ const foodArr = [
     popularity: 8,
     rating: 4.5,
     tags:['glutenFree','wellDone', 'mediumRare', 'rare']},
-    {name: 'tacos',
+    {name: 'soup',
     price: 4.50,
-    category: 'entree',
+    category: 'appetizer',
     popularity: 7,
     rating: 4,
-    tags:['glutenFree', 'carneAsada', 'chicken', 'pork']}
+    tags:['glutenFree', 'of the day', 'with noodles']}
 ]
 
 
@@ -193,9 +193,9 @@ const filterByProperty = (property, number, type) => {
     const filteredArr = foodArr.filter((ele) => {
        for(let i = 0; i < ele.length; i++){
         if(type === 'above'){
-            return ele.property > number
+            return property > number
     }else if(type === 'below'){
-        return ele.property < number
+        return property < number
     }
     }
 })
@@ -210,5 +210,4 @@ return filteredArr;
 */
 
 //CODE HERE
-// filterByProperty(8.65, 5, 'above');
 console.log(filterByProperty('price', 3, 'above'))
